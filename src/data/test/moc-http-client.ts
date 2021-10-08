@@ -1,14 +1,14 @@
 import { HttpPostParams, IHttpPostClient } from '@/data/protocols/http/http-post-client'
 import { HttpResponse, HttpStatusCode } from '@/data/protocols/http/http-response'
 
-export class HttpPostClientSpy implements IHttpPostClient {
+export class HttpPostClientSpy<T, R> implements IHttpPostClient<T, R> {
   url?: string
-  body?: object
-  response: HttpResponse = {
+  body?: T
+  response: HttpResponse<T> = {
     statusCode: HttpStatusCode.ok
   }
 
-  async post (params: HttpPostParams): Promise<HttpResponse> {
+  async post (params: HttpPostParams<T>): Promise<HttpResponse<R>> {
     this.url = params.url
     this.body = params.body
     return Promise.resolve(this.response)
