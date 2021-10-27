@@ -1,6 +1,6 @@
 {
     "compilerOptions": {
-        "target": "es6",
+        "target": "es5",
         "lib": [
             "dom",
             "dom.iterable",
@@ -16,12 +16,13 @@
             "@/*": ["*"]
         },
         "allowJs": true,
-        "resolveJsonModule": true
+        "skipLibCheck": true,
+        "allowSyntheticDefaultImports": true,
+        "forceConsistentCasingInFileNames": true,
+        "resolveJsonModule": true,
+        "noEmit": true
     },
     "include": [
         "src"
-    ],
-    "exclude": [
-        "src/main/test/cypress"
     ]
 }

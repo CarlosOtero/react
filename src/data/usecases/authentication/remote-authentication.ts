@@ -1,9 +1,9 @@
 import { IHttpPostClient, HttpStatusCode } from '@/data/protocols/http'
-import { Authentication, AuthenticationParams } from '@/domain/usecases'
+import { IAuthentication, AuthenticationParams } from '@/domain/usecases'
 import { InvalidCredentialsError, UnexpectedError } from '@/domain/errors'
 import { AccountModel } from '@/domain/models'
 
-export class RemoteAuthentication implements Authentication {
+export class RemoteAuthentication implements IAuthentication {
   constructor (
     private readonly url: string,
     private readonly httpPostClient: IHttpPostClient<AuthenticationParams, AccountModel>) {

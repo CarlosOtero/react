@@ -3,7 +3,7 @@ import { HttpPostParams, IHttpPostClient, HttpResponse, HttpStatusCode } from '@
 export class HttpPostClientSpy<T, R> implements IHttpPostClient<T, R> {
   url?: string
   body?: T
-  response: HttpResponse<T> = {
+  response: HttpResponse<R> = {
     statusCode: HttpStatusCode.ok
   }
 
