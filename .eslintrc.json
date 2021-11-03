@@ -8,7 +8,9 @@
     "standard-with-typescript",
     "plugin:react/recommended"
   ],
-  "plugins": ["react"],
+  "plugins": [
+    "react"
+  ], 
   "parserOptions": {
     "project": "./tsconfig.json"
   },
