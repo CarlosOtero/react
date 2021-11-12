@@ -1,6 +1,6 @@
 import React from 'react'
 
-type Props = React.HtmlHTMLAttributes<HTMLElement>
+// type Props = React.HtmlHTMLAttributes<HTMLElement>
 
 const Logo: React.FC = () => {
   return (
