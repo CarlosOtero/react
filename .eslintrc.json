@@ -9,7 +9,8 @@
     "plugin:react/recommended"
   ],
   "plugins": [
-    "react"
+    "react",
+    "@typescript-eslint",
   ], 
   "parserOptions": {
     "project": "./tsconfig.json"
