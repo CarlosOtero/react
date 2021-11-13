@@ -10,7 +10,7 @@
   ],
   "plugins": [
     "react",
-    "@typescript-eslint",
+    "@typescript-eslint"
   ], 
   "parserOptions": {
     "project": "./tsconfig.json"
