@@ -11,11 +11,6 @@
     "test:ci": "npm test -- --coverage",
     "check": "npm-check -u -s"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "echo \"pre-commit\""
-    }
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
