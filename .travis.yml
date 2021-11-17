@@ -3,4 +3,8 @@ node_js:
   - 12
 script:
   - eslint 'src/**'
+<<<<<<< HEAD
   - npm run test:ci
+=======
+  - npm run test:coveralls
+>>>>>>> feat/ci
