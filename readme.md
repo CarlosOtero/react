@@ -1,1 +1,0 @@
-[![Build Status](https://app.travis-ci.com/CarlosOtero/react.svg?branch=main)](https://app.travis-ci.com/CarlosOtero/react)
