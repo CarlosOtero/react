@@ -1,5 +1,5 @@
 import { HttpPostParams, HttpResponse, IHttpPostClient } from '@/data/protocols/http'
-import axios,{ AxiosResponse }  from 'axios'
+import axios, { AxiosResponse } from 'axios'
 
 export class AxiosHttpClient implements IHttpPostClient<any, any> {
   async post (params: HttpPostParams<any>): Promise<HttpResponse<any>> {

@@ -52,11 +52,10 @@ module.exports = {
     }]
   },
   devServer: {
-    static: './public',
-    devMiddleware: {
-      writeToDisk: true
-    },
-    historyApiFallback: true
+    contentBase: './public',
+    writeToDisk: true,
+    historyApiFallback: true,
+    port: 8080
   },
   externals: {
     react: 'React',

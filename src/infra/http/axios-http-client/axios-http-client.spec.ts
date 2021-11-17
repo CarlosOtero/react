@@ -42,4 +42,3 @@ describe('AxiosHttpClient', () => {
     expect(promise).toEqual(mokedAxios.post.mock.results[0].value)
   })
 })
-
