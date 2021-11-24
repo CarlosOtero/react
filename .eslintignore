@@ -1,6 +1,8 @@
+src/presentation/images
 node_modules
 .vscode
 coverage
 public
+dist
 *.scss
-src/presentation/images
+*.json
