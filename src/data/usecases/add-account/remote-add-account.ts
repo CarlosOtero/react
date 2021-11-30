@@ -6,7 +6,7 @@ import { HttpStatusCode, IHttpPostClient } from '@/data/protocols/http'
 export class RemoteAddAccount implements IAddAccount {
   constructor (
     private readonly url: string,
-    private readonly httpPostClient: IHttpPostClient<AddAccountParams, AccountModel>) {
+    private readonly httpPostClient: IHttpPostClient<AccountModel>) {
   }
 
   async add (params: AddAccountParams): Promise<AccountModel> {
