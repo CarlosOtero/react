@@ -19,54 +19,9 @@ const SurveyList: React.FC = () => {
         <ul>
           <li>
             <div className={Styles.surveyContent}>
-              <time>
-                <span className={Styles.day}>22</span>
-                <span className={Styles.month}>03</span>
-                <span className={Styles.year}>2020</span>
-              </time>
-              <p>Qual é seu framework web favorito?</p>
-            </div>
-            <footer>Ver Resultado</footer>
-          </li>
-
-          <li>
-            <div className={Styles.surveyContent}>
-              <time>
-                <span className={Styles.day}>22</span>
-                <span className={Styles.month}>03</span>
-                <span className={Styles.year}>2020</span>
-              </time>
-              <p>Qual é seu framework web favorito?</p>
-            </div>
-            <footer>Ver Resultado</footer>
-          </li>
-
-          <li>
-            <div className={Styles.surveyContent}>
-              <time>
-                <span className={Styles.day}>22</span>
-                <span className={Styles.month}>03</span>
-                <span className={Styles.year}>2020</span>
-              </time>
-              <p>Qual é seu framework web favorito?</p>
-            </div>
-            <footer>Ver Resultado</footer>
-          </li>
-
-          <li>
-            <div className={Styles.surveyContent}>
-              <time>
-                <span className={Styles.day}>22</span>
-                <span className={Styles.month}>03</span>
-                <span className={Styles.year}>2020</span>
-              </time>
-              <p>Qual é seu framework web favorito?</p>
-            </div>
-            <footer>Ver Resultado</footer>
-          </li>
-
-          <li>
-            <div className={Styles.surveyContent}>
+              <div className={[Styles.iconWrap, Styles.red].join(' ')}>
+                <img className={Styles.icon} src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAASCAMAAABsDg4iAAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAFKADAAQAAAABAAAAEgAAAAA9nQVdAAAAWlBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////9ZMre9AAAAHXRSTlMABAUiKjFCSV5kcXSAj5mbsbXJzNLj6O71+Pv8/SrZNWIAAABeSURBVBjTbc9JDoAgEAXR74DziLPS97+mCWBsQtfy7QpAMp7kenQOzEQAavrTAFlcGRqPBfE8TgJmRsCeBNwlJAk3CctAj+/INjhswFusdYGlV2xQgqESDOqODWi5vc+VF8/v0QrTAAAAAElFTkSuQmCC' />
+              </div>
               <time>
                 <span className={Styles.day}>22</span>
                 <span className={Styles.month}>03</span>
