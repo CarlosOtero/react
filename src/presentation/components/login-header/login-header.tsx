@@ -3,7 +3,7 @@ import Styles from './login-header-styles.scss'
 
 const LoginHeader: React.FC = () => {
   return (
-    <header className={Styles.header}>
+    <header className={Styles.headerWrap}>
       <div className={Styles.img_logo}></div>
     </header>
   )

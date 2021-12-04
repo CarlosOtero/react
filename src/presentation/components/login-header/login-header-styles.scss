@@ -1,7 +1,7 @@
 @import "../../styles/colors.scss";
 
 
-.header {
+.headerWrap {
   display: flex;
   flex-direction: column;
   border-top: 40px solid $primaryDark;
@@ -15,5 +15,11 @@
     margin: 10px;
     border-radius: 50%;
     box-shadow: 0px 1px 3px -1px $black;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .headerWrap {
+    border-top-width: 20px;
   }
 }
