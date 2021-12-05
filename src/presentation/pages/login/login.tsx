@@ -4,15 +4,15 @@ import Styles from './login-styles.scss'
 import { Footer, LoginHeader, Input, FormStatus, SubmitButton } from '@/presentation/components'
 import Context from '@/presentation/contexts/form/form-context'
 import { IValidation } from '@/presentation/protocols/validation'
-import { IAuthentication, ISaveAccessToken } from '@/domain/usecases'
+import { IAuthentication, IUpdateCurrentAccount } from '@/domain/usecases'
 
 type Props = {
   validation: IValidation
   authentication: IAuthentication
-  saveAccessToken: ISaveAccessToken
+  updateCurrentAccount: IUpdateCurrentAccount
 }
 
-const Login: React.FC<Props> = ({ validation, authentication, saveAccessToken }: Props) => {
+const Login: React.FC<Props> = ({ validation, authentication, updateCurrentAccount }: Props) => {
   const history = useHistory()
   const [state, setState] = useState({
     isLoading: false,
@@ -48,8 +48,8 @@ const Login: React.FC<Props> = ({ validation, authentication, saveAccessToken }:
         email: state.email,
         password: state.password
       })
-      // localStorage.setItem('accessToken', account.accessToken)
-      await saveAccessToken.save(account.accessToken)
+
+      await updateCurrentAccount.save(account)
       history.replace('/')
     } catch (error) {
       setState({

@@ -1,9 +1,10 @@
-import { ISaveAccessToken } from '@/domain/usecases/save-access-token'
+import { AccountModel } from '@/domain/models'
+import { IUpdateCurrentAccount } from '@/domain/usecases/update-current-account'
 
-export class SaveAccessTokenMock implements ISaveAccessToken {
-  accessToken: string
+export class UpdateCurrentAccountMock implements IUpdateCurrentAccount {
+  account: AccountModel
 
-  async save (accessToken: string): Promise<void> {
-    this.accessToken = accessToken
+  async save (account: AccountModel): Promise<void> {
+    this.account = account
   }
 }
