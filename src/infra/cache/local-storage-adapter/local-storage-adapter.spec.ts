@@ -1,5 +1,5 @@
 import { LocalStorageAdapter } from '@/infra/cache'
-
+import { AccountModel } from '@/domain/models'
 import 'jest-localstorage-mock'
 import faker from 'faker'
 
@@ -12,8 +12,8 @@ describe('LocalStorageAdapter', () => {
   test('Should call localStorage (JS) with correct values', async () => {
     const sut = makeSut()
     const key = faker.database.column()
-    const value = faker.datatype.uuid()
+    const value = faker.random.objectElement<AccountModel>()
     sut.set(key, value)
-    expect(localStorage.setItem).toHaveBeenCalledWith(key, value)
+    expect(localStorage.setItem).toHaveBeenCalledWith(key, JSON.stringify(value))
   })
 })
