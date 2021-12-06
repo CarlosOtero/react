@@ -9,6 +9,6 @@ export class LocalUpdateCurrentAccount implements IUpdateCurrentAccount {
     if (!account?.accessToken) {
       throw new UnexpectedError()
     }
-    await this.setStorqge.set('account', JSON.stringify(account))
+    this.setStorqge.set('account', JSON.stringify(account))
   }
 }
