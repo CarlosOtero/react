@@ -14,7 +14,7 @@ export const mockSurveyModel = (): SurveyModel => ({
   date: faker.date.recent()
 })
 
-export const mockSureyListModel = (): SurveyModel[] => ([
+export const mockSurveyListModel = (): SurveyModel[] => ([
   mockSurveyModel(),
   mockSurveyModel(),
   mockSurveyModel()
