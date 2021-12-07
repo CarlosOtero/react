@@ -1,7 +1,7 @@
 import { SurveyModel } from '../models'
 import faker from 'faker'
 
-export const mockSureyListModel = (): SurveyModel[] => ([{
+export const mockSureyModel = (): SurveyModel => ({
   id: faker.datatype.uuid(),
   question: faker.random.words(10),
   answers: [{
@@ -12,4 +12,10 @@ export const mockSureyListModel = (): SurveyModel[] => ([{
   }],
   didAnswer: faker.datatype.boolean(),
   date: faker.date.recent()
-}])
+})
+
+export const mockSureyListModel = (): SurveyModel[] => ([
+  mockSureyModel(),
+  mockSureyModel(),
+  mockSureyModel()
+])
