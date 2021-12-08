@@ -1,9 +1,9 @@
 import { HttpStatusCode, IHttpGetClient } from '@/data/protocols/http'
 import { UnexpectedError } from '@/domain/errors'
 import { SurveyModel } from '@/domain/models'
-import { ILoadSureyList } from '@/domain/usecases/load-survey-list'
+import { ILoadSurveyList } from '@/domain/usecases/load-survey-list'
 
-export class RemoteLoadSurveyList implements ILoadSureyList {
+export class RemoteLoadSurveyList implements ILoadSurveyList {
   constructor (
     private readonly url: string,
     private readonly httpGetClient: IHttpGetClient<SurveyModel[]>

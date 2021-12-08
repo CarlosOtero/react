@@ -1,12 +1,12 @@
 import { SurveyList } from '@/presentation/pages'
-import { ILoadSureyList } from '@/domain/usecases'
+import { ILoadSurveyList } from '@/domain/usecases'
 import { SurveyModel } from '@/domain/models'
 import { mockSurveyListModel } from '@/domain/test'
 import { fireEvent, render, screen, waitFor } from '@testing-library/react'
 import React from 'react'
 import { UnexpectedError } from '@/domain/errors'
 
-class LoadSurveyListSpy implements ILoadSureyList {
+class LoadSurveyListSpy implements ILoadSurveyList {
   callsCount = 0
   surveys = mockSurveyListModel()
 
