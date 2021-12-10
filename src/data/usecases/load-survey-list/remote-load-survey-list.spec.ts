@@ -1,8 +1,7 @@
 import { RemoteLoadSurveyList } from './remote-load-survey-list'
-import { HttpGetClientSpy } from '@/data/test'
+import { HttpGetClientSpy, mockRemoteSurveyListModel } from '@/data/test'
 import { UnexpectedError } from '@/domain/errors'
 import { HttpStatusCode } from '@/data/protocols/http'
-import { mockSurveyListModel } from '@/domain/test'
 import faker from 'faker'
 
 type SutTypes = {
@@ -56,13 +55,28 @@ describe('RemoteLoadSurveyList', () => {
 
   test('Shoud return a lit of ILoadSurveyList.Models if HttpGetClient return 200', async () => {
     const { sut, httpGetClientSpy } = makeSut()
-    const HttpResult = mockSurveyListModel()
+    const HttpResult = mockRemoteSurveyListModel()
     httpGetClientSpy.response = {
       statusCode: HttpStatusCode.ok,
       body: HttpResult
     }
     const surveyList = await sut.loadAll()
-    expect(surveyList).toEqual(HttpResult)
+    expect(surveyList).toEqual([{
+      id: HttpResult[0].id,
+      question: HttpResult[0].question,
+      didAnswer: HttpResult[0].didAnswer,
+      date: new Date(HttpResult[0].date)
+    }, {
+      id: HttpResult[1].id,
+      question: HttpResult[1].question,
+      didAnswer: HttpResult[1].didAnswer,
+      date: new Date(HttpResult[1].date)
+    }, {
+      id: HttpResult[2].id,
+      question: HttpResult[2].question,
+      didAnswer: HttpResult[2].didAnswer,
+      date: new Date(HttpResult[2].date)
+    }])
   })
 
   test('Shoud return an empty list if HttpGetClient return 204', async () => {
