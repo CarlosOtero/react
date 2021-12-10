@@ -7,12 +7,12 @@ import Signup from './signup'
 import { Helper, ValidationStub } from '@/presentation/test'
 import { AddAccountSpy } from '@/domain/test'
 import { EmailInUseError } from '@/domain/errors'
-import { AccountModel } from '@/domain/models'
 import { render, fireEvent, waitFor, screen } from '@testing-library/react'
+import { IAddAccount } from '@/domain/usecases'
 
 type SutTypes = {
   addAccountSpy: AddAccountSpy
-  setCurrentAccountMock: (account: AccountModel) => void
+  setCurrentAccountMock: (account: IAddAccount.Model) => void
 }
 
 type SutParams = {
