@@ -23,6 +23,14 @@ export class AxiosHttpClient implements IHttpPostClient, IHttpGetClient {
   }
 
   private adapt (axiosResponse: AxiosResponse): HttpResponse {
+    /*
+    if (!axiosResponse) {
+      return {
+        statusCode: HttpStatusCode.forbidden,
+        body: ''
+      }
+    }
+    */
     return {
       statusCode: axiosResponse.status,
       body: axiosResponse.data
